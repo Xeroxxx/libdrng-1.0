@@ -2,7 +2,7 @@
 DRNG Library for ServUO
 ========================================================================
 
-Version to run with ServUO on Windows
+Library to run with ServUO or RunUO on Windows
 
 ========================================================================
 DRNG Library
