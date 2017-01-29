@@ -4,6 +4,23 @@ DRNG Library for ServUO
 
 Library to run with ServUO or RunUO on Windows
 
+Functions exported:
+
+RdRand_isSupported
+RdSeed_isSupported
+rdrand_16
+rdrand_32
+rdrand_64
+rdrand_get_bytes
+rdrand_get_n_32
+rdrand_get_n_64
+rdseed_16
+rdseed_32
+rdseed_64
+rdseed_get_bytes
+rdseed_get_n_32
+rdseed_get_n_64
+
 ========================================================================
 DRNG Library
 ========================================================================
