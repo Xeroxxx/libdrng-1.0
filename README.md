@@ -2,7 +2,13 @@
 DRNG Library for ServUO
 ========================================================================
 
-Library to run with ServUO or RunUO on Windows
+Library to run with ServUO or RunUO on Windows and Linux
+
+### Linux
+Compile by running ./configure && make and place libdrng.so in your ServUO folder
+
+### Windows
+Compile with Visual Studio and place drng32.dll or drng64.dll in your ServUO folder
 
 Functions exported:
 

@@ -101,7 +101,11 @@ typedef unsigned __int64 uint64_t;
 *
 * \return bool/int of whether or not rdrand is supported
 */
+#ifdef __GNUC__
+int RdRand_isSupported();
+#else
 __declspec(dllexport) int RdRand_isSupported();
+#endif
 
 
 /*! \brief Determines whether or not rdseed is supported by the CPU
@@ -111,8 +115,11 @@ __declspec(dllexport) int RdRand_isSupported();
 *
 * \return bool/int of whether or not rdseed is supported
 */
+#ifdef __GNUC__
+int RdSeed_isSupported();
+#else
 __declspec(dllexport) int RdSeed_isSupported();
-
+#endif
 
 /*! \brief Calls rdseed for a 16-bit result.
 *
@@ -130,7 +137,11 @@ __declspec(dllexport) int RdSeed_isSupported();
 *
 * \return whether or not the call was successful, or supported at all
 */
+#ifdef __GNUC__
+int rdseed_16(uint16_t* x, int retry_count);
+#else
 __declspec(dllexport) int rdseed_16(uint16_t* x, int retry_count);
+#endif
 
 /*! \brief Calls rdrand for a 16-bit result.
 *
@@ -149,7 +160,11 @@ __declspec(dllexport) int rdseed_16(uint16_t* x, int retry_count);
 *
 * \return whether or not the call was successful, or supported at all
 */
+#ifdef __GNUC__
+int rdrand_16(uint16_t* x, int retry);
+#else
 __declspec(dllexport) int rdrand_16(uint16_t* x, int retry);
+#endif
 
 /*! \brief Calls rdseed for a 32-bit result.
 *
@@ -167,7 +182,11 @@ __declspec(dllexport) int rdrand_16(uint16_t* x, int retry);
 *
 * \return whether or not the call was successful, or supported at all
 */
+#ifdef __GNUC__
+int rdseed_32(uint32_t* x, int retry_count);
+#else
 __declspec(dllexport) int rdseed_32(uint32_t* x, int retry_count);
+#endif
 
 /*! \brief Calls rdrand for a 32-bit result.
 *
@@ -186,7 +205,11 @@ __declspec(dllexport) int rdseed_32(uint32_t* x, int retry_count);
 *
 * \return whether or not the call was successful, or supported at all
 */
+#ifdef __GNUC__
+int rdrand_32(uint32_t* x, int retry);
+#else
 __declspec(dllexport) int rdrand_32(uint32_t* x, int retry);
+#endif
 
 /*! \brief Calls rdseed for a 64-bit result.
 *
@@ -204,7 +227,11 @@ __declspec(dllexport) int rdrand_32(uint32_t* x, int retry);
 *
 * \return whether or not the call was successful, or supported at all
 */
+#ifdef __GNUC__
+int rdseed_64(uint64_t* x, int retry_count);
+#else
 __declspec(dllexport) int rdseed_64(uint64_t* x, int retry_count);
+#endif
 
 /*! \brief Calls rdrand for a 64-bits result.
 *
@@ -223,7 +250,11 @@ __declspec(dllexport) int rdseed_64(uint64_t* x, int retry_count);
 *
 * \return whether or not the call was successful, or supported at all
 */
+#ifdef __GNUC__
+int rdrand_64(uint64_t* x, int retry);
+#else
 __declspec(dllexport) int rdrand_64(uint64_t* x, int retry);
+#endif
 
 /*! \brief Calls rdseed to obtain multiple 64-byte results.
 *
@@ -244,7 +275,11 @@ __declspec(dllexport) int rdrand_64(uint64_t* x, int retry);
 * \param skip int to determine index of array to start from
 * \return total number of results generated or error number
 */
+#ifdef __GNUC__
+int rdseed_get_n_64(unsigned int n, uint64_t* x, unsigned int skip, unsigned int max_retries);
+#else
 __declspec(dllexport) int rdseed_get_n_64(unsigned int n, uint64_t* x, unsigned int skip, unsigned int max_retries);
+#endif
 
 /*! \brief Calls rdrand to obtain multiple 64-byte results.
 *
@@ -256,7 +291,11 @@ __declspec(dllexport) int rdseed_get_n_64(unsigned int n, uint64_t* x, unsigned 
 * \param n total number of 64-bit random values to generate
 * \param x pointer to memory buffer to fill with 64-bit random values
 */
+#ifdef __GNUC__
+int rdrand_get_n_64(unsigned int n, uint64_t* x);
+#else
 __declspec(dllexport) int rdrand_get_n_64(unsigned int n, uint64_t* x);
+#endif
 
 /*! \brief Calls rdseed to obtain multiple 32-byte results.
 *
@@ -277,7 +316,11 @@ __declspec(dllexport) int rdrand_get_n_64(unsigned int n, uint64_t* x);
 * \param skip int to determine index of array to start from
 * \return total number of results generated or error number
 */
+#ifdef __GNUC__
+int rdseed_get_n_32(unsigned int n, uint32_t* x, unsigned int skip, unsigned int max_retries);
+#else
 __declspec(dllexport) int rdseed_get_n_32(unsigned int n, uint32_t* x, unsigned int skip, unsigned int max_retries);
+#endif
 
 
 /*! \brief Calls rdrand to obtain multiple 32-byte results.
@@ -290,7 +333,11 @@ __declspec(dllexport) int rdseed_get_n_32(unsigned int n, uint32_t* x, unsigned 
 * \param n total number of 32-bit random values to generate
 * \param x pointer to memory buffer to fill with 32-bit random values
 */
+#ifdef __GNUC__
+int rdrand_get_n_32(unsigned int n, uint32_t* x);
+#else
 __declspec(dllexport) int rdrand_get_n_32(unsigned int n, uint32_t* x);
+#endif
 
 /*! \brief Calls rdseed to fill a buffer of arbitrary size with random bytes.
 *
@@ -312,8 +359,11 @@ __declspec(dllexport) int rdrand_get_n_32(unsigned int n, uint32_t* x);
 *
 * \return total number or bytes generated if rdseed is supported
 */
-
+#ifdef __GNUC__
+int rdseed_get_bytes(unsigned int n, unsigned char *buffer, unsigned int skip, unsigned int max_retries);
+#else
 __declspec(dllexport) int rdseed_get_bytes(unsigned int n, unsigned char *buffer, unsigned int skip, unsigned int max_retries);
+#endif
 
 /*! \brief Calls rdrand to fill a buffer of arbitrary size with random bytes.
 *
@@ -325,7 +375,10 @@ __declspec(dllexport) int rdseed_get_bytes(unsigned int n, unsigned char *buffer
 *
 * \return whether or not the call was successful, or supported at all
 */
-
+#ifdef __GNUC__
+int rdrand_get_bytes(unsigned int n, unsigned char *buffer);
+#else
 __declspec(dllexport) int rdrand_get_bytes(unsigned int n, unsigned char *buffer);
+#endif
 
 #endif // DRNG_H
