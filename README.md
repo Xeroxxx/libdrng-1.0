@@ -2,7 +2,7 @@
 DRNG Library for ServUO
 ========================================================================
 
-Library to run with ServUO or RunUO on Windows and Linux
+Library to run with [ServUO](https://github.com/ServUO/ServUO) or [RunUO](https://github.com/runuo/runuo) on Windows and Linux
 
 ### Linux
 Compile by running ./configure && make and place libdrng.so in your ServUO folder
@@ -52,4 +52,3 @@ doc/html/index.html to get started.
 Copyright(C) 2015 Intel Corporation. All rights reserved.
 
 *Other names and brands may be claimed as the property of others
-
