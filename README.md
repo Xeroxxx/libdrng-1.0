@@ -1,6 +1,5 @@
-========================================================================
-DRNG Library for ServUO
-========================================================================
+# DRNG Library for ServUO/RunUO
+
 
 Library to run with [ServUO](https://github.com/ServUO/ServUO) or [RunUO](https://github.com/runuo/runuo) on Windows and Linux
 
