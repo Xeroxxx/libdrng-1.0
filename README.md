@@ -26,9 +26,9 @@ rdseed_get_bytes<br />
 rdseed_get_n_32<br />
 rdseed_get_n_64<br />
 
-========================================================================
-DRNG Library
-========================================================================
+
+# DRNG Library
+
 Welcome to the DRNG Library. This is a simple library aimed at bringing 
 suport for the rdrand and rdseed instructions feature of Intel 
 processors, starting with the 3rd Generation Intel Core(tm) processor, 
